@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS modules(module_id text PRIMARY KEY NOT NULL,module_name text NULL,module_path text NULL,module_description text NULL)
+CREATE TABLE IF NOT EXISTS domians(domain_id text PRIMARY KEY NOT NULL,domain_name text NULL,ip_address text NULL,target_name text NULL,domain_description text NULL,module_id text NULL)
+CREATE TABLE IF NOT EXISTS hosts(host_id text PRIMARY KEY NOT NULL,host_name text NULL,ip_address text NULL,country_en text NULL,country_zh text NULL,location text NULL,latitude text NULL,longitude text NULL,target_name text NULL,host_description text NULL,module_id text NULL)
+CREATE TABLE IF NOT EXISTS password(password_id text PRIMARY KEY NOT NULL,passwd text NULL,password_type text NULL,passwd_level text NULL,passwd_description text NULL)
+CREATE TABLE IF NOT EXISTS services(service_id text PRIMARY KEY NOT NULL,ip_address text NULL,port text NULL,protocol text NULL,service_type text NULL,banner text NULL,service_description text NULL,target_name text NULL,module_id text NULL)
+CREATE TABLE IF NOT EXISTS userName(user_id text PRIMARY KEY NOT NULL,user_name text NULL,user_type text NULL,user_description text NULL)
+CREATE TABLE IF NOT EXISTS vluns(vuln_id text PRIMARY KEY NOT NULL,vlun_target text NULL,vlun_details text NULL,vlun_type text NULL,vlun_refrence text NULL,cve_num text NULL,vlun_description text NULL,module_id text NULL)
